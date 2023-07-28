@@ -69,10 +69,10 @@
       <button class="close-popup">✖</button>
       <p class="popup-title">Вход</p>
       <form id="loginForm" class="login-form">
-         <label for="username">Имя пользователя:</label>
-         <input type="text" id="username" name="username" required>
-         <label for="password">Пароль:</label>
-         <input type="password" id="password" name="password" required>
+         <label for="loginUsername">Имя пользователя:</label>
+         <input type="text" id="loginUsername" name="username" required>
+         <label for="loginPassword">Пароль:</label>
+         <input type="password" id="loginPassword" name="password" required>
          <p class="remain">
             <input id="save-ps" type="checkbox" checked>
             <label for="save-ps">запомнить</label>
@@ -82,23 +82,25 @@
       </form>
       <p>Нет аккаунта? <a href="#">Зарегистрируйтесь</a></p>
    </div>
+
    <!-- Попап регистрации -->
    <div id="register" class="register-popup popup">
       <button class="close-popup">✖</button>
       <p class="popup-title">Регистрация</p>
       <form id="registrationForm" class="registration-form">
-         <label for="username">Имя пользователя: <span>*</span> </label>
-         <input type="text" id="username" name="username" required>
+         <label for="registerUsername">Имя пользователя: <span>*</span> </label>
+         <input type="text" id="registerUsername" name="username" required>
 
-         <label for="email">Email: <span>*</span></label>
-         <input type="email" id="email" name="email" required>
+         <label for="registerEmail">Email: <span>*</span></label>
+         <input type="email" id="registerEmail" name="email" required>
 
-         <label for="password">Пароль: <span>*</span></label>
-         <input type="password" id="password" name="password" required>
+         <label for="registerPassword">Пароль: <span>*</span></label>
+         <input type="password" id="registerPassword" name="password" required>
 
          <button type="submit" class="submit-btn">Зарегистрироваться</button>
       </form>
    </div>
+
 </header>
       <main class="home">
          <div class="home__body container">
