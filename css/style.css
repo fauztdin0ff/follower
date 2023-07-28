@@ -640,6 +640,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 148px;
 }
 @media (max-width: 800px) {
   .item-card__info {
@@ -659,6 +660,7 @@ main {
 .item-card__list {
   font-size: 13px;
   color: #ccc;
+  flex: 1 1 auto;
 }
 @media (max-width: 1200px) {
   .item-card__list {
