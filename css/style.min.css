@@ -104,27 +104,6 @@ img {
   font-weight: 600;
   font-style: normal;
 }
-@font-face {
-  font-family: RobotoCondensed;
-  font-display: swap;
-  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: RobotoCondensed;
-  font-display: swap;
-  src: url("../fonts/RobotoCondensed-Light.woff2") format("woff2"), url("../fonts/RobotoCondensed-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: RobotoCondensed;
-  font-display: swap;
-  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
 html {
   scroll-behavior: smooth;
 }
@@ -910,6 +889,11 @@ main {
   box-shadow: 0 0 5px rgb(160, 157, 157);
   backdrop-filter: blur(6px);
 }
+@media (max-width: 500px) {
+  .services__tab select {
+    padding: 10px 12px;
+  }
+}
 .services__tab select option {
   background-color: #fff;
   border-radius: 6px;
@@ -978,12 +962,20 @@ main {
 }
 .choose__type label {
   flex: 0 1 40%;
-  display: flex;
   align-items: center;
+  white-space: wrap;
+}
+.choose__type label span {
+  display: inline;
+  font-size: 10px;
+  color: rgb(175, 175, 175);
 }
 @media (max-width: 500px) {
   .choose__type label {
     flex: 0 1 25%;
+  }
+  .choose__type label br {
+    display: none;
   }
 }
 .choose__type .services__tab {
@@ -1056,7 +1048,7 @@ main {
 }
 .choose__link span, .choose__quantity span {
   font-size: 10px;
-  color: #ccc;
+  color: rgb(175, 175, 175);
 }
 .choose__link input, .choose__quantity input {
   flex: 0 1 60%;
@@ -1067,5 +1059,6 @@ main {
 @media (max-width: 500px) {
   .choose__link input, .choose__quantity input {
     flex: 0 1 100%;
+    padding: 10px 12px;
   }
 }
