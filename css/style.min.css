@@ -866,6 +866,11 @@ main {
 .services__form {
   max-width: 600px;
 }
+@media (max-width: 500px) {
+  .services__form {
+    padding-top: 80px;
+  }
+}
 .services__tab {
   position: relative;
   display: inline-block;
@@ -1061,4 +1066,20 @@ main {
     flex: 0 1 100%;
     padding: 10px 12px;
   }
+}
+.choose__amount {
+  margin-top: 30px;
+  text-align: center;
+  margin: 30px auto 0 auto;
+}
+.choose__amount label {
+  color: rgb(34, 190, 25);
+  font-size: 26px;
+}
+.choose__amount input {
+  background-color: transparent !important;
+  font-size: 26px;
+  color: rgb(47, 221, 38);
+  text-align: center;
+  font-weight: 700;
 }
