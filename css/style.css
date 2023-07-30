@@ -104,6 +104,41 @@ img {
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?8rxy3j");
+  src: url("../fonts/icomoon.eot?8rxy3j#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?8rxy3j") format("truetype"), url("../fonts/icomoon.woff?8rxy3j") format("woff"), url("../fonts/icomoon.svg?8rxy3j#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=_icon-]::before,
+[class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-like:before {
+  content: "\e900";
+}
+
+._icon-follow:before {
+  content: "\e973";
+}
+
+._icon-view:before {
+  content: "\e9cf";
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -906,6 +941,7 @@ main {
 }
 .services__button {
   margin-top: 40px;
+  margin-bottom: 30px;
   text-align: center;
 }
 .services__button button {
@@ -1082,4 +1118,62 @@ main {
   color: rgb(47, 221, 38);
   text-align: center;
   font-weight: 700;
+}
+
+/*--------------------------------------------PRICE TABLE---------------------------------------------*/
+.prices {
+  padding-top: 50px;
+}
+.prices__attention {
+  color: rgb(1, 178, 89);
+  font-size: 20px;
+}
+
+.accordion {
+  display: block;
+  max-width: 700px;
+}
+
+.accordion-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgb(160, 157, 157);
+  backdrop-filter: blur(6px);
+  margin: 15px;
+  color: #fff;
+}
+
+.accordion-header {
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.accordion-header-image {
+  position: absolute;
+  right: 10px;
+}
+.accordion-header-image img {
+  width: 20px;
+  height: 20px;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px 15px;
+  text-align: left;
+}
+.accordion-content p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.accordion-content span {
+  color: #ccc;
+  margin-left: 10px;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
 }
