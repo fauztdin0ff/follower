@@ -1120,6 +1120,25 @@ main {
   font-weight: 700;
 }
 
+.additional-text {
+  text-align: center;
+  margin-bottom: 25px;
+  background: url("../img/services/info-circle.svg") 10px center/25px 25px no-repeat;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgb(160, 157, 157);
+  backdrop-filter: blur(6px);
+  padding: 15px 15px 15px 40px;
+  font-weight: 300;
+  color: #ccc;
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .additional-text {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 880));
+  }
+}
+
 /*--------------------------------------------PRICE TABLE---------------------------------------------*/
 .prices {
   padding-top: 50px;

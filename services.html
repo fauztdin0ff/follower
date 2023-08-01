@@ -236,6 +236,9 @@
                                  <option value="instagram">Instagram</option>
                                  <option value="telegram">Telegram</option>
                                  <option value="tiktok">TikTok</option>
+                                 <option value="vkontakte">Вконтакте</option>
+                                 <option value="twitch">Twitch</option>
+                                 <option value="discord">Discord</option>
                               </select>
                            </div>
                         </div>
@@ -244,10 +247,15 @@
                               <label>Выберите услугу: <br><span>(цена за 1 000 шт)</span></label>
                               <div class="services__tab">
                                  <select id="youtubeTabsSelect">
-                                    <option value="likes">Лайки быстрые (25 000 сум)</option>
-                                    <option value="views">Просмотры</option>
-                                    <option value="subscribers">Подписчики YouTube</option>
-                                    <option value="shorts">Шортсы YouTube</option>
+                                    <option value="likes">Лайки бюджетные (18 000 сум)</option>
+                                    <option value="likesVip">Лайки Premuim живые (44 000 сум)</option>
+                                    <option value="viewsCheap">Просмотры бюджетные (20 000)</option>
+                                    <option value="views">Просмотры реальные (52 000)</option>
+                                    <option value="viewsVip">Просмотры Premium живые (112 000 сум)</option>
+                                    <option value="subscribers">Подписчики бюджетные (280 000 сум)</option>
+                                    <option value="subscribersVip">Подписчики Premium живые (570 000 сум)</option>
+                                    <option value="combo">Подписчики + просмотры + лайки (600 000 сум)</option>
+                                    <option value="commentaries">Комментарии Premium RU живые (1 000 000)</option>
                                  </select>
                               </div>
                            </div>
@@ -257,7 +265,7 @@
                            <div id="instagramTabs" class="choose__serv">
                               <label>Выберите подтаб:</label>
                               <div class="services__tab">
-                                 <select id="youtubeTabsSelect">
+                                 <select id="instagramTabsSelect">
                                     <option value="likes">Лайки Instagram</option>
                                     <option value="views">Просмотры</option>
                                     <option value="subscribers">Подписчики</option>
@@ -270,7 +278,7 @@
                            <div id="telegramTabs" class="choose__serv">
                               <label>Выберите подтаб:</label>
                               <div class="services__tab">
-                                 <select id="youtubeTabsSelect">
+                                 <select id="telegramTabsSelect">
                                     <option value="likes">Лайки telegram</option>
                                     <option value="views">Комментарии</option>
                                     <option value="subscribers">Подписчики</option>
@@ -283,7 +291,7 @@
                            <div id="tiktokTabs" class="choose__serv">
                               <label>Выберите подтаб:</label>
                               <div class="services__tab">
-                                 <select id="youtubeTabsSelect">
+                                 <select id="tiktokTabsSelect">
                                     <option value="likes">Лайки tiktok</option>
                                     <option value="views">Просмотры</option>
                                     <option value="subscribers">Подписчики</option>
@@ -291,12 +299,55 @@
                               </div>
                            </div>
                         </div>
+
+                        <div class="choose__type">
+                           <div id="vkontakteTabs" class="choose__serv">
+                              <label>Выберите подтаб:</label>
+                              <div class="services__tab">
+                                 <select id="vkontakteTabsSelect">
+                                    <option value="likes">Лайки Вконтакте</option>
+                                    <option value="views">Просмотры</option>
+                                    <option value="subscribers">Подписчики</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="choose__type">
+                           <div id="twitchTabs" class="choose__serv">
+                              <label>Выберите подтаб:</label>
+                              <div class="services__tab">
+                                 <select id="twitchTabsSelect">
+                                    <option value="likes">Лайки Twitch</option>
+                                    <option value="views">Просмотры</option>
+                                    <option value="subscribers">Подписчики</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="choose__type">
+                           <div id="discordTabs" class="choose__serv">
+                              <label>Выберите подтаб:</label>
+                              <div class="services__tab">
+                                 <select id="discordTabsSelect">
+                                    <option value="likes">Лайки discord</option>
+                                    <option value="views">Просмотры</option>
+                                    <option value="subscribers">Подписчики</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div id="additionalTextContainer2" class="additional-text">
+                        </div>
                         <div class="choose__link"><label for="linkInput">Ссылка:</label>
-                           <input type="text" id="linkInput" name="link" placeholder="https://">
+                           <input type="text" id="linkInput" name="link" placeholder="https://" required>
                         </div>
                         <div class="choose__quantity">
                            <label for="quantityInput">Количество: <br> <span>(мин. 50, макс. 10 000)</span> </label>
-                           <input type="text" id="quantityInput" name="quantity" placeholder="1000">
+                           <input type="text" id="quantityInput" name="quantity" placeholder="1000" pattern="[0-9]+"
+                              min="100" max="5000" required>
                         </div>
                         <div class="choose__amount">
                            <label for="amountInput">Сумма к оплате:</label>
