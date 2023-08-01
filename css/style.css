@@ -922,7 +922,7 @@ main {
   border: none;
   outline: none;
   appearance: none;
-  padding: 6px 12px;
+  padding: 6px 22px 6px 12px;
   font-size: 16px;
   color: #fff;
   background: url("../img/services/arrow.png") right/20px no-repeat, linear-gradient(90deg, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%);
@@ -931,13 +931,18 @@ main {
 }
 @media (max-width: 500px) {
   .services__tab select {
-    padding: 10px 12px;
+    padding: 10px 22px 10px 12px;
   }
 }
 .services__tab select option {
   background-color: #fff;
   border-radius: 6px;
   color: #333;
+}
+@media (max-width: 500px) {
+  .services__tab select option {
+    font-size: 14px;
+  }
 }
 .services__button {
   margin-top: 40px;
