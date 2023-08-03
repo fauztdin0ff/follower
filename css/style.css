@@ -229,6 +229,7 @@ main {
   padding: 5px 15px;
   border-radius: 10px;
   font-family: Montserrat;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   font-size: 14px;
 }
@@ -265,13 +266,16 @@ main {
   height: 400px;
   top: -150%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   box-shadow: 0 0 5px rgb(160, 157, 157);
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   z-index: 2;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: top 0.5s ease 0s;
+  transition: top 0.5s ease 0s;
   opacity: 0;
   padding: 20px;
   text-align: center;
@@ -354,6 +358,7 @@ main {
   color: #fff;
   border-radius: 6px;
   margin: 30px auto 0 auto;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   font-family: Montserrat;
 }
@@ -420,6 +425,7 @@ main {
 .home::before {
   left: 50%;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .home::after {
@@ -484,6 +490,7 @@ main {
   background-color: rgba(165, 35, 35, 0.4);
   color: #fff;
   border: 1px solid #fff;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 .home__button a:hover {
@@ -505,6 +512,7 @@ main {
 }
 
 .sidebar {
+  -webkit-transition: right 0.5s ease 0s;
   transition: right 0.5s ease 0s;
 }
 .sidebar .menu__link {
@@ -621,19 +629,24 @@ main {
 }
 
 .card__item:nth-child(1) {
+  -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
 .card__item:nth-child(2) {
+  -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
 }
 .card__item:nth-child(3) {
+  -webkit-transform: rotate(-3deg);
   transform: rotate(-3deg);
 }
 .card__item:nth-child(4) {
+  -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
 @media (max-width: 767px) {
   .card__item:nth-child(1), .card__item:nth-child(2), .card__item:nth-child(3), .card__item:nth-child(4) {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 }
@@ -726,6 +739,7 @@ main {
   pointer-events: none;
   left: 50%;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .about__body {
@@ -869,6 +883,7 @@ main {
   position: absolute;
   top: 0px;
   left: 50%;
+  -webkit-transform: translateX(-50deg);
   transform: translateX(-50%);
   font-size: 28px;
   color: rgb(98, 210, 224);
@@ -919,6 +934,7 @@ main {
 .services__tab select {
   width: 100%;
   height: 100%;
+  min-height: 30px;
   border: none;
   outline: none;
   appearance: none;
