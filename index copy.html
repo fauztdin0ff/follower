@@ -119,15 +119,16 @@
                         </path>
                      </svg>
                   </button>
+
                </div>
                <aside id="sidebar" class="home__sidebar sidebar">
                   <div class="menu">
                      <ul class="menu__list">
                         <li class="menu__link">
-                           <a href="index.html">Главная</a>
+                           <a href="index.html" class="active">Главная</a>
                         </li>
                         <li class="menu__link">
-                           <a href="services.html" class="active">Заказать</a>
+                           <a href="services.html">Заказать</a>
                         </li>
                         <li class="menu__link">
                            <a href="prices.html">Цены</a>
@@ -228,262 +229,167 @@
                   </div>
                </aside>
                <div class="home__content">
-                  <div class="title-serv">
-                     <h2>Заказ №123</h2>
+                  <div class="home__title">
+                     <h1>Сервис накрутки <span>лайков, просмотров,</span> подписок</h1>
                   </div>
-                  <div class="services">
-                     <form id="socialMediaForm" class="services__form">
-                        <div class="choose__social">
-                           <label>Выберите площадку:</label>
-                           <div class="services__tab">
-                              <select id="socialMediaSelect" class="services__select">
-                                 <option value="youtube">YouTube</option>
-                                 <option value="instagram">Instagram</option>
-                                 <option value="telegram">Telegram</option>
-                                 <option value="tiktok">TikTok</option>
-                                 <option value="vkontakte">Вконтакте</option>
-                                 <option value="twitch">Twitch</option>
-                                 <option value="discord">Discord</option>
-                              </select>
-                           </div>
+                  <div class="home__button">
+                     <a href="services.html">Заказать</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="cards">
+            <div class="cards__body container">
+               <div class="cards-items">
+                  <div class="card__item item-card">
+                     <div class="item-card__image">
+                        <img src="img/home/youtube-screen.png" alt="youtube">
+                     </div>
+                     <div class="item-card__info">
+                        <div class="item-card__name">
+                           <h4>Давно мечтаешь о своем блоге?</h4>
                         </div>
-                        <div class="choose__type">
-                           <div id="youtubeTabs" class="choose__serv show">
-                              <label>Выберите услугу: <br><span>(цена за 1 000 шт)</span></label>
-                              <div class="services__tab">
-                                 <select id="youtubeTabsSelect">
-                                    <option value="likes" data-minmax="50-10000">Лайки бюджетные (18 000 сум)</option>
-                                    <!--125-->
-                                    <option value="likesVip" data-minmax="100-10000">Лайки Premuim живые (44 000 сум)
-                                    </option>
-                                    <!--1088-->
-                                    <option value="viewsCheap" data-minmax="100-10000">Просмотры бюджетные (20 000 сум)
-                                    </option>
-                                    <!--41-->
-                                    <option value="views" data-minmax="100-10000">Просмотры реальные (28 000 сум)
-                                    </option>
-                                    <!--203-->
-                                    <option value="viewsVip" data-minmax="1000-15000">Просмотры Premium живые (112 000
-                                       сум)</option>
-                                    <!--181-->
-                                    <option value="subscribers" data-minmax="50-5000">Подписчики бюджетные (280 000
-                                       сум)</option>
-                                    <!--1070-->
-                                    <option value="subscribersVip" data-minmax="50-5000">Подписчики Premium живые (570
-                                       000 сум)</option>
-                                    <!--928-->
-                                    <option value="combo" data-minmax="200-3000">Подписчики + просмотры + лайки (600 000
-                                       сум)</option>
-                                    <!--210-->
-                                    <option value="commentaries" data-minmax="50-1000">Комментарии Premium RU живые (1
-                                       000 000 сум)</option>
-                                    <!--49-->
-                                 </select>
-                              </div>
-                           </div>
+                        <div class="item-card__list">
+                           Начинай! А мы поможем с твоей узнаваемостью.
                         </div>
-
-                        <div class="choose__type">
-                           <div id="instagramTabs" class="choose__serv">
-                              <label>Выберите услугу: <br><span>(цена за 1 000 шт)</span></label>
-                              <div class="services__tab">
-                                 <select id="instagramTabsSelect">
-                                    <option value="likesCheap" data-minmax="50-5000">Лайки бюджетные (12 000 сум)
-                                    </option>
-                                    <!--358-->
-                                    <option value="likes" data-minmax="50-5000">Лайки (живые с охватом)(18 000 сум)
-                                    </option>
-                                    <!--12-->
-                                    <option value="likesVip" data-minmax="50-5000">Лайки Premium, живые с охватом (60
-                                       000 сум)</option>
-                                    <!--84-->
-                                    <option value="subscribersCheap" data-minmax="50-10000">Подписчики бюджетные (24 000
-                                       сум)</option>
-                                    <!--549-->
-                                    <option value="subscribers" data-minmax="50-10000">Подписчики реальные (36 000 сум)
-                                    </option>
-                                    <!--517-->
-                                    <option value="subscribersVip" data-minmax="50-10000">Подписчики Premium живые (165
-                                       000 сум)</option>
-                                    <!--7-->
-                                    <option value="viewsVideo" data-minmax="100-10000">Просмотры видео (40 000 сум)
-                                    </option>
-                                    <!--44-->
-                                    <option value="viewsHistory" data-minmax="50-1000">Просмотры историй (+посещения)
-                                       (12 000 сум)</option>
-                                    <!--поменять!-->
-                                    <option value="combo" data-minmax="100-5000">Посещения + охват + впечатления (18 000
-                                       сум)</option>
-                                    <!--590-->
-                                    <option value="repost" data-minmax="100-10000">Репост (поделиться постом) (22 000
-                                       сум)
-                                    </option>
-                                    <!--576-->
-                                 </select>
-                              </div>
-                           </div>
+                        <div class="item-card__link">
+                           <a href="services.html">заказать</a>
                         </div>
-
-                        <div class="choose__type">
-                           <div id="telegramTabs" class="choose__serv">
-                              <label>Выберите услугу: <br><span>(цена за 1 000 шт)</span></label>
-                              <div class="services__tab">
-                                 <select id="telegramTabsSelect">
-                                    <option value="viewsHistory" data-minmax="50-10000">Просмотры историй бюджетные (24
-                                       000 сум)</option>
-                                    <!--602-->
-                                    <option value="viewsPostCheap" data-minmax="50-10000">Просмотры постов бюджетные (8
-                                       000 сум)</option>
-                                    <!--362-->
-                                    <option value="viewsPost" data-minmax="50-10000">Просмотры последние 100 постов (34
-                                       000 сум)</option>
-                                    <!--157-->
-                                    <option value="subscribers" data-minmax="50-10000">Подписчики бюджетные (20 000 сум)
-                                    </option>
-                                    <!--707-->
-                                    <option value="subscribersVip" data-minmax="100-10000">Подписчики реальные Premium
-                                       (88 000 сум)</option>
-                                    <!--540-->
-                                    <option value="subscribersWoman" data-minmax="50-3000">Подписчицы девушки +
-                                       просмотры из поиска (65 000
-                                       сум)</option>
-                                    <!--1278-->
-                                    <option value="reaction" data-minmax="50-10000">Позитивные авто реакции ⟮ 👍 ❤️ 🔥
-                                       🎉🤩 😁 ⟯ (10 000 сум)
-                                    </option>
-                                    <!--1157-->
-                                    <option value="repost" data-minmax="50-10000">Авто репосты реальные (14 000 сум)
-                                    </option>
-                                    <!--957-->
-                                 </select>
-                              </div>
-                           </div>
+                     </div>
+                  </div>
+                  <div class="card__item item-card">
+                     <div class="item-card__image">
+                        <img src="img/home/instagram-screen.png" alt="instagram">
+                     </div>
+                     <div class="item-card__info">
+                        <div class="item-card__name">
+                           <h4>Хочешь активность как у своей богатой подруги?</h4>
                         </div>
-
-                        <div class="choose__type">
-                           <div id="tiktokTabs" class="choose__serv">
-                              <label>Выберите услугу: <br><span>(цена за 1 000 шт)</span></label>
-                              <div class="services__tab">
-                                 <select id="tiktokTabsSelect">
-                                    <option value="subscribersCheap" data-minmax="50-5000">Подписчики бюджетные (66 000
-                                       сум)</option>
-                                    <!--388-->
-                                    <option value="subscribers" data-minmax="50-5000">Подписчики реальные (96 000 сум)
-                                    </option>
-                                    <!--444-->
-                                    <option value="subscribersVip" data-minmax="50-5000">Подписчики Premium живые (150
-                                       000 сум)</option>
-                                    <!--51-->
-                                    <option value="views" data-minmax="100-10000">Просмотры бюджетные (14 000 сум)
-                                    </option>
-                                    <!--382-->
-                                    <option value="viewsVip" data-minmax="50-10000">Просмотры Premium живые (66 000 сум)
-                                    </option>
-                                    <!--446-->
-                                    <option value="likesCheap" data-minmax="50-10000">Лайки бюджетные (12 000 сум)
-                                    </option>
-                                    <!--539-->
-                                    <option value="likes" data-minmax="100-10000">Лайки реальные (28 000 сум)</option>
-                                    <!--589-->
-                                    <option value="likesVip" data-minmax="50-3000">Лайки Premium живые (96 000 сум)
-                                    </option>
-                                    <!--109-->
-                                    <option value="liveView15" data-minmax="100-1000">Прямой эфир зрители 15мин. (222
-                                       000
-                                       сум)</option>
-                                    <!--393-->
-                                    <option value="liveView30" data-minmax="100-1000">Прямой эфир зрители 30мин. (350
-                                       000
-                                       сум)</option>
-                                    <!--390-->
-                                    <option value="liveView60" data-minmax="100-1000">Прямой эфир зрители 60мин. (555
-                                       000
-                                       сум)</option>
-                                    <!--392-->
-                                    <option value="combo" data-minmax="50-1000">Живые просмотры + лайки + подписки(600
-                                       000 сум)</option>
-                                    <!--901-->
-                                 </select>
-                              </div>
-                           </div>
+                        <div class="item-card__list">
+                           Раскрути свой профиль вместе с нами!
                         </div>
-
-                        <div class="choose__type">
-                           <div id="vkontakteTabs" class="choose__serv">
-                              <label>Выберите услугу: <br><span>(цена за 1 000 шт)</span></label>
-                              <div class="services__tab">
-                                 <select id="vkontakteTabsSelect">
-                                    <option value="likes" data-minmax="50-5000">Лайки бюджетные (20 000 сум)</option>
-                                    <!--139-->
-                                    <option value="likesVip" data-minmax="50-5000">Лайки Premium живые (55 000 сум)
-                                    </option>
-                                    <!--141-->
-                                    <option value="viewsVideo" data-minmax="100-5000">Просмотры видео (12 000 сум)
-                                    </option>
-                                    <!--296-->
-                                    <option value="subscribers" data-minmax="50-5000">Подписчики бюджетные (50 000 сум)
-                                    </option>
-                                    <!--1028-->
-                                    <option value="subscribersVip" data-minmax="50-5000">Подписчики Premium живые (100
-                                       000 сум)(</option>
-                                    <!--220-->
-                                    <option value="subscribersWoman" data-minmax="50-5000">Подписчики девушки живые (150
-                                       000 сум)</option>
-                                    <!--116-->
-                                 </select>
-                              </div>
-                           </div>
+                        <div class="item-card__link">
+                           <a href="services.html">заказать</a>
                         </div>
-
-                        <div class="choose__type">
-                           <div id="twitchTabs" class="choose__serv">
-                              <label>Выберите услугу: <br><span>(цена за 1 000 шт)</span></label>
-                              <div class="services__tab">
-                                 <select id="twitchTabsSelect">
-                                    <option value="subscribers" data-minmax="50-5000">Подписчики быстрые (20 000 сум)
-                                    </option>
-                                    <!--336-->
-                                 </select>
-                              </div>
-                           </div>
+                     </div>
+                  </div>
+                  <div class="card__item item-card">
+                     <div class="item-card__image">
+                        <img src="img/home/tiktok-screen.png" alt="tiktok">
+                     </div>
+                     <div class="item-card__info">
+                        <div class="item-card__name">
+                           <h4>Любишь танцевать и петь на камеру?</h4>
                         </div>
-
-                        <div class="choose__type">
-                           <div id="discordTabs" class="choose__serv">
-                              <label>Выберите услугу: <br><span>(цена за 1 000 шт)</span></label>
-                              <div class="services__tab">
-                                 <select id="discordTabsSelect">
-                                    <option value="subscribers" data-minmax="500-2000">Заявки в друзья (270 000 сум)
-                                    </option>
-                                    <!--625-->
-                                    <option value="members" data-minmax="50-5000">Участники в сервер (235 000 сум)
-                                    </option>
-                                    <!--1225-->
-                                 </select>
-                              </div>
-                           </div>
+                        <div class="item-card__list">
+                           Танцуй веселее и мы закинем тебя в реки!
                         </div>
-
-                        <div id="additionalTextContainer2" class="additional-text">
-                           Лайки бюджетные. Старт до 10 мин. Скорость до 100к в сутки. Без списаний
+                        <div class="item-card__link">
+                           <a href="services.html">заказать</a>
                         </div>
-                        <div class="choose__link"><label for="linkInput">Ссылка:</label>
-                           <input type="text" id="linkInput" name="link" placeholder="https://" required>
+                     </div>
+                  </div>
+                  <div class="card__item item-card">
+                     <div class="item-card__image">
+                        <img src="img/home/telegram-screen.png" alt="telegram">
+                     </div>
+                     <div class="item-card__info">
+                        <div class="item-card__name">
+                           <h4>Начни свой бизнес в телеграме!</h4>
                         </div>
-                        <div class="choose__quantity">
-                           <label for="quantityInput">Количество: <br> <span class="minmax-value">(мин. 100, макс. 10
-                                 000)</span> </label>
-                           <input type="text" id="quantityInput" name="quantity" placeholder="1000" pattern="[0-9]+"
-                              min="100" max="5000" required>
+                        <div class="item-card__list">
+                           Улучшай презентабельность своего канала с нами!
                         </div>
-                        <div class="choose__amount">
-                           <label for="amountInput">Сумма к оплате:</label>
-                           <input type="text" id="amountInput" name="amount" placeholder="0" readonly>
+                        <div class="item-card__link">
+                           <a href="services.html">заказать</a>
                         </div>
-                        <div class="services__button">
-                           <button type="submit">Заказать</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <section class="about">
+            <div class="about__body container">
+               <div class="about__title">
+                  <h2>Наши преимущества</h2>
+               </div>
+               <div class="about__blocks">
+                  <div class="about__block block-about">
+                     <div class="block-about__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                           class="bi bi-people" viewBox="0 0 16 16">
+                           <path
+                              d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                        </svg>
+                     </div>
+                     <div class="block-about__info">
+                        <div class="block-about__title">
+                           <h6>Нам доверяют</h6>
                         </div>
-                     </form>
+                        <div class="block-about__text">
+                           1 000+ заказов каждый месяц
+                        </div>
+                     </div>
+                  </div>
+                  <div class="about__block block-about">
+                     <div class="block-about__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                           class="bi bi-person-video3" viewBox="0 0 16 16">
+                           <path
+                              d="M14 9.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm-6 5.7c0 .8.8.8.8.8h6.4s.8 0 .8-.8-.8-3.2-4-3.2-4 2.4-4 3.2Z" />
+                           <path
+                              d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h5.243c.122-.326.295-.668.526-1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7.81c.353.23.656.496.91.783.059-.187.09-.386.09-.593V4a2 2 0 0 0-2-2H2Z" />
+                        </svg>
+                     </div>
+                     <div class="block-about__info">
+                        <div class="block-about__title">
+                           <h6>Качество</h6>
+                        </div>
+                        <div class="block-about__text">
+                           30 000+ накрученных аккаунтов и постов
+                        </div>
+                     </div>
+                  </div>
+                  <div class="about__block block-about">
+                     <div class="block-about__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                           class="bi bi-cash-coin" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd"
+                              d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z" />
+                           <path
+                              d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z" />
+                           <path
+                              d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z" />
+                           <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z" />
+                        </svg>
+                     </div>
+                     <div class="block-about__info">
+                        <div class="block-about__title">
+                           <h6>Низкая цена</h6>
+                        </div>
+                        <div class="block-about__text">
+                           наши цены ниже среднего на рынке
+                        </div>
+                     </div>
+                  </div>
+                  <div class="about__block block-about">
+                     <div class="block-about__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                           class="bi bi-shield-check" viewBox="0 0 16 16">
+                           <path
+                              d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+                           <path
+                              d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                     </div>
+                     <div class="block-about__info">
+                        <div class="block-about__title">
+                           <h6>Гарантия</h6>
+                        </div>
+                        <div class="block-about__text">
+                           заказывайте услуги с гарантией
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
@@ -552,7 +458,7 @@
       </div>
    </div>
    <div class="footer__bottom container">
-      <a href="policy.html">политика конфиденциальности</a>
+      <a href="#">политика конфиденциальности</a>
    </div>
 </footer>
    </div>
