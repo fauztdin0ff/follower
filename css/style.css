@@ -274,8 +274,8 @@ main {
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   z-index: 2;
-  -webkit-transition: top 0.5s ease 0s;
-  transition: top 0.5s ease 0s;
+  -webkit-transition: top 0.3s ease 0s;
+  transition: top 0.3s ease 0s;
   opacity: 0;
   padding: 20px;
   text-align: center;
@@ -417,6 +417,7 @@ main {
   height: 350px;
   border-radius: 50%;
   background: linear-gradient(90deg, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%);
+  -webkit-filter: blur(80px);
   filter: blur(80px);
   opacity: 0.3;
   position: absolute;
@@ -512,8 +513,8 @@ main {
 }
 
 .sidebar {
-  -webkit-transition: right 0.5s ease 0s;
-  transition: right 0.5s ease 0s;
+  -webkit-transition: right 0.3s ease 0s;
+  transition: right 0.3s ease 0s;
 }
 .sidebar .menu__link {
   margin-bottom: 20px;
@@ -539,6 +540,7 @@ main {
   left: 0;
   top: 0;
   background: linear-gradient(90deg, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%);
+  -webkit-filter: blur(10px);
   filter: blur(10px);
   opacity: 0.5;
   display: none;
@@ -594,6 +596,7 @@ main {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     box-shadow: 0 0 5px rgb(160, 157, 157);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     padding: 30px;
     border-radius: 15px 0 0 15px;
@@ -733,6 +736,7 @@ main {
   height: 350px;
   border-radius: 50%;
   background: linear-gradient(90deg, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%);
+  -webkit-filter: blur(80px);
   filter: blur(80px);
   opacity: 0.3;
   position: absolute;
@@ -762,6 +766,7 @@ main {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   box-shadow: 0 0 5px rgb(160, 157, 157);
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   margin: 20px 0;
   padding: 25px;
@@ -934,7 +939,6 @@ main {
 .services__tab select {
   width: 100%;
   height: 100%;
-  min-height: 30px;
   border: none;
   outline: none;
   appearance: none;
@@ -943,17 +947,19 @@ main {
   color: #fff;
   background: url("../img/services/arrow.png") right/20px no-repeat, linear-gradient(90deg, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%);
   box-shadow: 0 0 5px rgb(160, 157, 157);
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
 @media (max-width: 500px) {
   .services__tab select {
     padding: 10px 22px 10px 12px;
+    min-height: 37px;
   }
 }
 .services__tab select option {
-  background-color: #fff;
   border-radius: 6px;
-  color: #333;
+  color: #fff;
+  background-color: rgb(53, 45, 77);
 }
 @media (max-width: 500px) {
   .services__tab select option {
@@ -1148,6 +1154,7 @@ main {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   box-shadow: 0 0 5px rgb(160, 157, 157);
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   padding: 15px 15px 15px 40px;
   font-weight: 300;
@@ -1178,6 +1185,7 @@ main {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   box-shadow: 0 0 5px rgb(160, 157, 157);
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   margin: 15px;
   color: #fff;
