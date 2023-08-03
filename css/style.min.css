@@ -264,7 +264,7 @@ main {
   position: fixed;
   width: 400px;
   height: 400px;
-  top: -150%;
+  bottom: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -274,8 +274,8 @@ main {
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   z-index: 2;
-  -webkit-transition: top 0.3s ease 0s;
-  transition: top 0.3s ease 0s;
+  -webkit-transition: bottom 0.3s ease 0s;
+  transition: bottom 0.3s ease 0s;
   opacity: 0;
   padding: 20px;
   text-align: center;
@@ -287,7 +287,8 @@ main {
   }
 }
 .header .popup.show {
-  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
   opacity: 1;
 }
 .header .popup .close-popup {
@@ -513,8 +514,8 @@ main {
 }
 
 .sidebar {
-  -webkit-transition: right 0.3s ease 0s;
-  transition: right 0.3s ease 0s;
+  -webkit-transition: left 0.3s ease 0s;
+  transition: left 0.3s ease 0s;
 }
 .sidebar .menu__link {
   margin-bottom: 20px;
@@ -592,7 +593,7 @@ main {
     max-height: calc(100vh - 200px);
     height: 100%;
     top: 200px;
-    right: -100%;
+    left: 100%;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     box-shadow: 0 0 5px rgb(160, 157, 157);
@@ -609,7 +610,7 @@ main {
     opacity: 1 !important;
   }
   .sidebar.show {
-    right: 0px;
+    left: 50%;
     overflow-y: auto;
   }
 }
