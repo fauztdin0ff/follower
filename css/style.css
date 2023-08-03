@@ -274,8 +274,8 @@ main {
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   z-index: 2;
-  -webkit-transition: bottom 0.3s ease 0s;
-  transition: bottom 0.3s ease 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
   opacity: 0;
   padding: 20px;
   text-align: center;
@@ -514,8 +514,8 @@ main {
 }
 
 .sidebar {
-  -webkit-transition: left 0.3s ease 0s;
-  transition: left 0.3s ease 0s;
+  -webkit-transition: left 0.3s linear 0s;
+  transition: left 0.3s linear 0s;
 }
 .sidebar .menu__link {
   margin-bottom: 20px;
