@@ -1257,6 +1257,63 @@ main {
   display: block;
 }
 
+/*--------------------------------------------Guarantees---------------------------------------------*/
+.guarantees {
+  padding: 15px;
+  color: #fff;
+  max-width: 700px;
+  text-align: left;
+}
+@media (max-width: 500px) {
+  .guarantees {
+    padding-top: 50px;
+  }
+}
+.guarantees p {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .guarantees p {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 880));
+  }
+}
+.guarantees p:last-child {
+  text-align: right;
+}
+.guarantees span {
+  color: rgb(34, 190, 25);
+  font-weight: 700;
+}
+.guarantees ul {
+  text-align: left;
+}
+.guarantees li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #ccc;
+}
+@media (max-width: 1200px) {
+  .guarantees li {
+    font-size: calc(12px + 2 * ((100vw - 320px) / 880));
+  }
+}
+.guarantees li::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /*--------------------------------------------Policy---------------------------------------------*/
 .policy {
   color: #fff;
