@@ -530,8 +530,8 @@ main {
 }
 
 .sidebar {
-  -webkit-transition: left 0.3s linear 0s;
-  transition: left 0.3s linear 0s;
+  -webkit-transition: right 0.3s linear 0s;
+  transition: right 0.3s linear 0s;
 }
 .sidebar .menu__link {
   margin-bottom: 20px;
@@ -609,7 +609,7 @@ main {
     max-height: calc(100vh - 200px);
     height: 100%;
     top: 200px;
-    left: 100%;
+    right: -100%;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     box-shadow: 0 0 5px rgb(160, 157, 157);
@@ -626,7 +626,7 @@ main {
     opacity: 1 !important;
   }
   .sidebar.show {
-    left: 50%;
+    right: 0;
     overflow-y: auto;
   }
 }
@@ -1350,4 +1350,312 @@ main {
 }
 .policy ul li {
   list-style: disc;
+}
+
+/*--------------------------------------------Cabinet---------------------------------------------*/
+.cabinet {
+  position: relative;
+  padding-top: 30px;
+}
+@media (max-width: 550px) {
+  .cabinet {
+    padding-top: 0;
+  }
+}
+.cabinet::before, .cabinet::after {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%);
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  opacity: 0.3;
+  position: absolute;
+  pointer-events: none;
+}
+.cabinet::before {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.cabinet::after {
+  width: 150px;
+  height: 150px;
+  bottom: 20px;
+  right: 10px;
+}
+.cabinet__body {
+  position: relative;
+  display: flex;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .cabinet__body {
+    padding-top: 85px;
+  }
+}
+.cabinet__body .menu__icon {
+  right: 5px;
+}
+
+.main-title {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  color: rgb(98, 210, 224);
+  font-size: 26px;
+}
+@media (max-width: 1200px) {
+  .main-title {
+    font-size: calc(22px + 4 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 767px) {
+  .main-title {
+    display: block;
+  }
+}
+
+.cabinet {
+  width: 100%;
+}
+.cabinet__finance {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+@media (max-width: 650px) {
+  .cabinet__finance {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .cabinet__finance {
+    flex-direction: column;
+  }
+}
+.cabinet__orders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 500px) {
+  .cabinet__orders {
+    flex-direction: column;
+  }
+}
+
+.finance {
+  flex: 1 1 100%;
+}
+.finance__item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgb(160, 157, 157);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  padding: 15px;
+  position: relative;
+  flex: 0 1 30%;
+}
+@media (max-width: 650px) {
+  .finance__item {
+    flex: 0 1 49%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 550px) {
+  .finance__item {
+    flex: 0 1 100%;
+  }
+}
+.finance__item h6 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+.finance__item p {
+  font-size: 18px;
+  color: rgb(48, 195, 97);
+  font-weight: 600;
+}
+.finance__item a {
+  display: inline-block;
+  border: 1px solid #fff;
+  margin-top: 20px;
+  padding: 3px 10px;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 300;
+  font-size: 12px;
+}
+@media (max-width: 1200px) {
+  .finance__item a {
+    font-size: calc(10px + 2 * ((100vw - 320px) / 880));
+  }
+}
+.finance__item a:hover {
+  background-color: #333;
+}
+@media (max-width: 550px) {
+  .finance__item a {
+    font-size: 14px;
+  }
+}
+.finance__item:nth-child(2) p {
+  color: rgb(195, 74, 206);
+}
+.finance__item:nth-child(3) p {
+  color: rgb(76, 147, 210);
+}
+
+.my-balance-icon,
+.my-pays-icon,
+.my-orders-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 550px) {
+  .my-balance-icon,
+  .my-pays-icon,
+  .my-orders-icon {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.my-balance-icon {
+  background-color: rgb(56, 179, 97);
+}
+
+.my-pays-icon {
+  background-color: rgb(169, 56, 179);
+}
+
+.my-orders-icon {
+  background-color: rgb(56, 122, 179);
+}
+
+.orders {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgb(160, 157, 157);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  padding: 10px;
+}
+.orders__info {
+  flex: 0 1 50%;
+}
+.orders__info p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.orders__info li {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+}
+@media (max-width: 1200px) {
+  .orders__info li {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 880));
+  }
+}
+.orders__info li:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 100%;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 0;
+}
+.orders__info li:nth-child(1)::before {
+  background-color: #36a2eb;
+}
+.orders__info li:nth-child(2)::before {
+  background-color: #fffc50;
+}
+.orders__info li:nth-child(3)::before {
+  background-color: rgb(67, 223, 75);
+}
+.orders__info li:nth-child(4)::before {
+  background-color: rgb(210, 66, 66);
+}
+.orders__chart {
+  flex: 0 1 50%;
+  max-width: 250px;
+}
+
+.all-orders {
+  padding: 40px 0;
+}
+.all-orders__title {
+  margin-bottom: 30px;
+}
+.all-orders__title h5 {
+  font-size: 20px;
+}
+@media (max-width: 1200px) {
+  .all-orders__title h5 {
+    font-size: calc(18px + 2 * ((100vw - 320px) / 880));
+  }
+}
+.all-orders__item {
+  display: flex;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgb(160, 157, 157);
+  text-align: center;
+  border-radius: 6px;
+  align-items: center;
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .all-orders__item {
+    font-size: calc(13px + 3 * ((100vw - 320px) / 880));
+  }
+}
+.all-orders__number {
+  flex: 0 1 10%;
+  padding: 5px 10px;
+}
+.all-orders__info {
+  padding: 5px 10px;
+  flex: 1 1 auto;
+  border-left: 1px solid #555;
+  border-right: 1px solid #555;
+}
+.all-orders__status {
+  padding: 5px 10px;
+  flex: 0 1 20%;
+}
+.all-orders .progress {
+  color: #36a2eb;
+}
+.all-orders .done {
+  color: rgb(67, 223, 75);
+}
+.all-orders .waiting {
+  color: #fffc50;
+}
+.all-orders .cancel {
+  color: rgb(210, 66, 66);
 }
