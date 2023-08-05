@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230805142126">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230806005405">
    <title>Накрутка соц. сетей Follower</title>
    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -41,71 +41,59 @@
             <span>Follower</span>
          </a>
       </div>
-      <div class="header__account account">
-         <button id="loginButton">
-            Войти
-            <svg width="30" height="30" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+      <button class="authorized__account account-authorized">
+         <div class="account-authorized__info">
+            <p class="account-authorized__username">username</p>
+            <p class="account-authorized__balance">55 000</p>
+         </div>
+         <div class="account-authorized__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 25 24" fill="#fff">
+               <path
+                  d="M22.8966 15.4853C20.0568 13.6955 16.7875 12.741 13.4466 12.741H13.3273C9.9625 12.741 6.69318 13.6955 3.87727 15.4853C3.23295 15.8671 2.875 16.5353 2.875 17.2751V19.3989C2.875 20.5682 3.80568 21.5228 4.975 21.5228H21.775C22.9205 21.5228 23.875 20.5682 23.875 19.3989V17.2751C23.875 16.5353 23.517 15.8671 22.8966 15.4853ZM21.9659 19.3989C21.9659 19.5182 21.8705 19.6137 21.775 19.6137H4.975C4.87955 19.6137 4.78409 19.5182 4.78409 19.3989V17.2751C4.78409 17.2035 4.83182 17.1319 4.87955 17.0842C7.40909 15.4853 10.3205 14.6501 13.3034 14.6501H13.4227C16.4057 14.6501 19.3409 15.4853 21.8466 17.108C21.8943 17.1557 21.942 17.2035 21.942 17.2989V19.3989H21.9659Z"
+                  fill="url(#myGradient)"></path>
+               <path
+                  d="M9.08008 5.29545V7.68182C9.08008 10.0443 11.013 11.9773 13.3755 11.9773C15.738 11.9773 17.671 10.0443 17.671 7.68182V5.29545C17.671 2.93295 15.738 1 13.3755 1C11.013 1 9.08008 2.93295 9.08008 5.29545ZM15.7619 5.29545V7.68182C15.7619 8.99432 14.688 10.0682 13.3755 10.0682C12.063 10.0682 10.9892 8.99432 10.9892 7.68182V5.29545C10.9892 3.98295 12.063 2.90909 13.3755 2.90909C14.688 2.90909 15.7619 3.98295 15.7619 5.29545Z"
+                  fill="url(#myGradient)"></path>
                <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stop-color="rgb(31, 252, 253)" />
                   <stop offset="100%" stop-color="rgb(232, 89, 232)" />
                </linearGradient>
-               <g>
-                  <path
-                     d="M384 512h-320v-128h320v-128l192 192-192 192zM1024 0v832l-384 192v-192h-384v-256h64v192h320v-576l256-128h-576v256h-64v-320z"
-                     fill="url(#myGradient)" />
-               </g>
             </svg>
-         </button>
-         <button id="registerButton">
-            Регистрация
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 25 24" fill="#fff">
-               <path
-                  d="M22.8966 15.4853C20.0568 13.6955 16.7875 12.741 13.4466 12.741H13.3273C9.9625 12.741 6.69318 13.6955 3.87727 15.4853C3.23295 15.8671 2.875 16.5353 2.875 17.2751V19.3989C2.875 20.5682 3.80568 21.5228 4.975 21.5228H21.775C22.9205 21.5228 23.875 20.5682 23.875 19.3989V17.2751C23.875 16.5353 23.517 15.8671 22.8966 15.4853ZM21.9659 19.3989C21.9659 19.5182 21.8705 19.6137 21.775 19.6137H4.975C4.87955 19.6137 4.78409 19.5182 4.78409 19.3989V17.2751C4.78409 17.2035 4.83182 17.1319 4.87955 17.0842C7.40909 15.4853 10.3205 14.6501 13.3034 14.6501H13.4227C16.4057 14.6501 19.3409 15.4853 21.8466 17.108C21.8943 17.1557 21.942 17.2035 21.942 17.2989V19.3989H21.9659Z"
-                  fill="#ffffff"></path>
-               <path
-                  d="M9.08008 5.29545V7.68182C9.08008 10.0443 11.013 11.9773 13.3755 11.9773C15.738 11.9773 17.671 10.0443 17.671 7.68182V5.29545C17.671 2.93295 15.738 1 13.3755 1C11.013 1 9.08008 2.93295 9.08008 5.29545ZM15.7619 5.29545V7.68182C15.7619 8.99432 14.688 10.0682 13.3755 10.0682C12.063 10.0682 10.9892 8.99432 10.9892 7.68182V5.29545C10.9892 3.98295 12.063 2.90909 13.3755 2.90909C14.688 2.90909 15.7619 3.98295 15.7619 5.29545Z"
-                  fill="#ffffff"></path>
-            </svg>
-         </button>
-      </div>
+         </div>
+         <div class="account-authorized__submenu">
+            <ul>
+               <li><a href="cabinet.html">Кабинет <svg width="20" height="20" viewBox="0 0 1024 1024"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                           <stop offset="0%" stop-color="rgb(31, 252, 253)" />
+                           <stop offset="100%" stop-color="rgb(232, 89, 232)" />
+                        </linearGradient>
+                        <g>
+                           <path
+                              d="M384 512h-320v-128h320v-128l192 192-192 192zM1024 0v832l-384 192v-192h-384v-256h64v192h320v-576l256-128h-576v256h-64v-320z"
+                              fill="url(#myGradient)" />
+                        </g>
+                     </svg></a></li>
+               <li><a href="payment.html">Пополнить <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="url(#myGradient)" class="bi bi-plus-square" viewBox="0 0 16 16">
+                        <path
+                           d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                        <path
+                           d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                     </svg></a></li>
+               <li><a href="#">Выйти <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                           d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"
+                           fill="url(#myGradient)" />
+                        <path fill-rule="evenodd"
+                           d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"
+                           fill="url(#myGradient)" />
+                     </svg> </a></li>
+            </ul>
+         </div>
+      </button>
    </div>
-   <!-- Попап для Войти -->
-   <div id="login" class="login-popup popup">
-      <button class="close-popup">✖</button>
-      <p class="popup-title">Вход</p>
-      <form id="loginForm" class="login-form">
-         <label for="loginUsername">Имя пользователя:</label>
-         <input type="text" id="loginUsername" name="username" required>
-         <label for="loginPassword">Пароль:</label>
-         <input type="password" id="loginPassword" name="password" required>
-         <p class="remain">
-            <input id="save-ps" type="checkbox" checked>
-            <label for="save-ps">запомнить</label>
-            <a href="#" class="forgot">забыли пароль?</a>
-         </p>
-         <button type="submit" class="submit-btn">Войти</button>
-      </form>
-      <p>Нет аккаунта? <a href="#">Зарегистрируйтесь</a></p>
-   </div>
-
-   <!-- Попап регистрации -->
-   <div id="register" class="register-popup popup">
-      <button class="close-popup">✖</button>
-      <p class="popup-title">Регистрация</p>
-      <form id="registrationForm" class="registration-form">
-         <label for="registerUsername">Имя пользователя: <span>*</span> </label>
-         <input type="text" id="registerUsername" name="username" required>
-
-         <label for="registerEmail">Email: <span>*</span></label>
-         <input type="email" id="registerEmail" name="email" required>
-
-         <label for="registerPassword">Пароль: <span>*</span></label>
-         <input type="password" id="registerPassword" name="password" required>
-
-         <button type="submit" class="submit-btn">Зарегистрироваться</button>
-      </form>
-   </div>
-
 </header>
       <main class="main">
          <section class="home">
@@ -482,7 +470,7 @@
    </div>
 </footer>
    </div>
-   <script src="js/app.min.js?_v=20230805142126"></script>
+   <script src="js/app.min.js?_v=20230806005405"></script>
 </body>
 
 </html>

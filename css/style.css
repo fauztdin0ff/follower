@@ -170,7 +170,9 @@ body.popup::before,
 body.lock::before {
   content: "";
   display: block;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -485,6 +487,91 @@ main {
 .header .register-popup .registration-form span {
   color: rgb(207, 40, 40);
   font-size: 18px;
+}
+
+.no-webp .account-authorized{
+  background: url("../img/services/arrow.png") 5% 80%/15px 15px no-repeat; }
+
+.account-authorized {
+  background-color: transparent;
+  position: relative;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  padding: 7px 7px 7px 7px;
+  border-radius: 10px;
+  font-family: Montserrat;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-size: 16px;
+}
+
+.account-authorized:hover {
+  background-color: #1d1d1d;
+}
+
+.account-authorized__info {
+  text-align: right;
+}
+
+.account-authorized__balance {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.account-authorized__icon svg {
+  padding-top: 4px;
+}
+
+.account-authorized__submenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px 0px 0px 10px;
+  -webkit-box-shadow: 0 0 5px rgb(160, 157, 157);
+          box-shadow: 0 0 5px rgb(160, 157, 157);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  padding: 10px 20px;
+  text-align: right;
+}
+
+.account-authorized__submenu li {
+  margin-bottom: 15px;
+}
+
+.account-authorized__submenu a {
+  font-size: 16px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.account-authorized__submenu a:hover {
+  text-decoration: underline;
+}
+
+.account-authorized__submenu a svg {
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+  margin-left: 5px;
+}
+
+.account-authorized:hover .account-authorized__submenu,
+.account-authorized.mobile-open .account-authorized__submenu {
+  display: block;
 }
 
 /*--------------------------------------------HOME---------------------------------------------*/
@@ -1787,6 +1874,219 @@ main {
   color: rgb(210, 66, 66);
 }
 
+/*--------------------------------------------Восстановить пароль---------------------------------------------*/
+
+.reset {
+  color: #fff;
+  position: relative;
+  min-height: 70vh;
+}
+
+.reset::before,
+.reset::after {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, right top, from(rgb(192, 55, 67)), to(rgb(121, 21, 207)));
+  background: -o-linear-gradient(left, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%);
+  background: linear-gradient(90deg, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%);
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  opacity: 0.3;
+  position: absolute;
+  pointer-events: none;
+}
+
+.reset::before {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+.reset::after {
+  width: 150px;
+  height: 150px;
+  bottom: 20px;
+  right: 10px;
+}
+
+.reset__body {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.reset__title {
+  margin-bottom: 30px;
+}
+
+.reset__form {
+  border-radius: 10px;
+  padding: 25px 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 0 5px rgb(160, 157, 157);
+          box-shadow: 0 0 5px rgb(160, 157, 157);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.reset__form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.reset__form input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.reset button {
+  background-color: rgb(98, 210, 224);
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #000;
+  font-family: Montserrat;
+}
+
+.reset p {
+  margin-top: 30px;
+  font-size: 24px;
+  color: rgb(1, 178, 89);
+}
+
+#showPasswordButton {
+  cursor: pointer;
+}
+
+#showPasswordButton,
+#showConfirmButton {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+#showPasswordButton svg,
+#showConfirmButton svg {
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+#new_password[type=password] + #showPasswordButton #hide-icon {
+  display: none;
+  /* Скрыть иконку скрытого пароля по умолчанию */
+}
+
+#new_password[type=text] + #showPasswordButton #show-icon {
+  display: none;
+  /* Скрыть иконку видимого пароля по умолчанию */
+}
+
+#confirm_password[type=password] + #showConfirmButton #hide-icon {
+  display: none;
+  /* Скрыть иконку скрытого пароля по умолчанию */
+}
+
+#confirm_password[type=text] + #showConfirmButton #show-icon {
+  display: none;
+  /* Скрыть иконку видимого пароля по умолчанию */
+}
+
+.mail-send {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.mail-send p {
+  text-align: center;
+  font-size: 22px;
+  color: rgb(1, 178, 89);
+  margin: 15px 0;
+}
+
+.mail-send a {
+  background-color: rgb(98, 210, 224);
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #000;
+  font-family: Montserrat;
+}
+
+/*--------------------------------------------Пополнение баланса---------------------------------------------*/
+
+.payment__content {
+  color: #fff;
+}
+
+.payment__method {
+  max-width: 600px;
+}
+
+.payment__icon {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.payment__icon img {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 5px;
+  max-width: 150px;
+}
+
+.payment__text {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.payment__text span:first-child {
+  color: rgb(210, 66, 66);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.payment__text span:last-child {
+  color: rgb(1, 178, 89);
+  font-weight: 600;
+}
+
+.payment__link {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.payment__link a {
+  padding: 7px 17px;
+  background-color: rgb(1, 178, 89);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.payment__link a:hover {
+  background-color: rgb(11, 126, 68);
+}
+
+.payment__image {
+  margin: 0 auto;
+  width: min(70%, 400px);
+  -webkit-transform: translateX(-40px);
+      -ms-transform: translateX(-40px);
+          transform: translateX(-40px);
+}
+
+.payment__image img {
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width: 601px) {
   .guarant__info ul {
     width: 80%;
@@ -1804,6 +2104,14 @@ main {
   }
 
   .header .login-popup .login-form .remain {
+    font-size: calc(12px + 2 * ((100vw - 320px) / 880));
+  }
+
+  .account-authorized {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 880));
+  }
+
+  .account-authorized__balance {
     font-size: calc(12px + 2 * ((100vw - 320px) / 880));
   }
 
@@ -1908,6 +2216,14 @@ main {
   .all-orders__item {
     font-size: calc(13px + 3 * ((100vw - 320px) / 880));
   }
+
+  .reset p {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 880));
+  }
+
+  .payment__text {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 880));
+  }
 }
 
 @media (max-width: 800px) {
@@ -1917,6 +2233,14 @@ main {
 }
 
 @media (max-width: 767px) {
+  .account-authorized__submenu {
+    display: none;
+  }
+
+  .account-authorized.mobile-open .account-authorized__submenu {
+    display: block;
+  }
+
   .home {
     padding-top: 20px;
     display: -webkit-box;
@@ -1964,7 +2288,6 @@ main {
     top: 200px;
     right: -100%;
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
     -webkit-box-shadow: 0 0 5px rgb(160, 157, 157);
             box-shadow: 0 0 5px rgb(160, 157, 157);
     -webkit-backdrop-filter: blur(6px);
@@ -2085,6 +2408,14 @@ main {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+
+  .reset__body {
+    padding: 100px 0 50px 0;
+  }
+
+  .payment {
+    padding-top: 100px;
   }
 }
 
@@ -2251,5 +2582,7 @@ main {
             flex-direction: column;
   }
 }
+
+.webp .account-authorized{ background: url(../img/services/arrow.webp) 5% 80%/15px 15px no-repeat; }
 
 .webp .services__tab select{ background: url(../img/services/arrow.webp) right/20px no-repeat, -webkit-gradient(linear, left top, right top, from(rgb(192, 55, 67)), to(rgb(121, 21, 207))); background: url(../img/services/arrow.webp) right/20px no-repeat, -o-linear-gradient(left, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%); background: url(../img/services/arrow.webp) right/20px no-repeat, linear-gradient(90deg, rgb(192, 55, 67) 0%, rgb(121, 21, 207) 100%); }
