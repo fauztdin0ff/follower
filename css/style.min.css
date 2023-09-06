@@ -155,7 +155,7 @@ html {
   scroll-behavior: smooth;
 }
 body.popup, body.lock {
-  overflow: hidden;
+  pointer-events: none;
 }
 .wrapper {
   min-height: 100%;
