@@ -159,8 +159,8 @@ body.popup, body.lock {
 }
 body.popup::before, body.lock::before {
   content: "";
-  display: block;
-  position: fixed;
+  display: inline-block;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
