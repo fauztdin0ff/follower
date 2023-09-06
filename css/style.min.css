@@ -749,7 +749,8 @@ main {
     max-height: calc(100vh - 200px);
     height: 100%;
     top: 200px;
-    right: -100%;
+    transform: translateX(100%);
+    right: 0;
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 5px rgb(160, 157, 157);
     -webkit-backdrop-filter: blur(6px);
@@ -758,15 +759,13 @@ main {
     border-radius: 15px 0 0 15px;
     text-align: center;
     z-index: 2;
-    overflow-y: auto;
   }
   .sidebar a {
     color: #fff !important;
     opacity: 1 !important;
   }
   .sidebar.show {
-    right: 0;
-    overflow-y: auto;
+    transform: translateX(0);
   }
 }
 
