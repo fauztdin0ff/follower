@@ -155,7 +155,7 @@ html {
 }
 
 body.popup, body.lock {
-  overflow: hidden;
+  overflow-Y: hidden;
   position: relative;
 }
 body.popup::before, body.lock::before {
