@@ -746,7 +746,7 @@ main {
 }
 @media (max-width: 767px) {
   .sidebar {
-    position: absolute;
+    position: fixed;
     max-height: calc(100vh - 200px);
     height: 100%;
     top: 200px;
