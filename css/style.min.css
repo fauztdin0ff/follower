@@ -156,6 +156,7 @@ html {
 }
 body.popup, body.lock {
   pointer-events: none;
+  filter: brightness(0.5);
 }
 .wrapper {
   min-height: 100%;
