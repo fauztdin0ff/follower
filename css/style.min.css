@@ -158,7 +158,6 @@ html {
 body.popup, body.lock {
 }
 body.popup::before, body.lock::before {
-  overflow: hidden;
   content: "";
   display: block;
   position: fixed;
