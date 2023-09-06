@@ -156,8 +156,7 @@ html {
 }
 
 body.popup, body.lock {
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0.3;
+  opacity: 0.5;
 }
 .wrapper {
   min-height: 100%;
