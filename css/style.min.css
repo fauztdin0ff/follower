@@ -155,9 +155,6 @@ html {
   scroll-behavior: smooth;
 }
 body.popup, body.lock {
-  overflow-Y: hidden;
-  position: relative;
-  transform: all 0.3s ease 0s;
 }
 body.popup::before, body.lock::before {
   content: "";
