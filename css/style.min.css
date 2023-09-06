@@ -156,10 +156,9 @@ html {
 }
 
 body.popup, body.lock {
-  overflow: hidden;
-  position: relative;
 }
 body.popup::before, body.lock::before {
+  overflow: hidden;
   content: "";
   display: block;
   position: fixed;
