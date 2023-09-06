@@ -670,8 +670,8 @@ main {
 }
 
 .sidebar {
-  -webkit-transition: right 0.3s linear 0s;
-  transition: right 0.3s linear 0s;
+  -webkit-transition: transform 0.3s linear 0s;
+  transition: transform 0.3s linear 0s;
 }
 .sidebar .menu__link {
   margin-bottom: 20px;
