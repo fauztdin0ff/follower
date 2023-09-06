@@ -154,7 +154,9 @@ img {
 html {
   scroll-behavior: smooth;
 }
-
+body.popup, body.lock {
+  overflow: hidden;
+}
 .wrapper {
   min-height: 100%;
   display: flex;
