@@ -38,6 +38,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background-color: #1d1d1d;
 }
 
 input::-ms-clear {
