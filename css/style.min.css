@@ -670,8 +670,9 @@ main {
 }
 
 .sidebar {
-  -webkit-transition: transform 0.3s linear 0s;
-  transition: transform 0.3s linear 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  will-change: transform;
 }
 .sidebar .menu__link {
   margin-bottom: 20px;
@@ -745,7 +746,7 @@ main {
 }
 @media (max-width: 767px) {
   .sidebar {
-    position: fixed;
+    position: absolute;
     max-height: calc(100vh - 200px);
     height: 100%;
     top: 200px;
