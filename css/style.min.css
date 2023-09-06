@@ -155,9 +155,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body.popup, body.lock {
-  overflow-Y: hidden;
-}
 .wrapper {
   min-height: 100%;
   display: flex;
