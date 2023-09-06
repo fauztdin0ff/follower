@@ -157,7 +157,7 @@ html {
 
 body.popup, body.lock {
 }
-body.popup::after, body.lock::after {
+body.popup::after, body.lock::before {
   content: "";
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.5);
