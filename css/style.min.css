@@ -38,7 +38,6 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color: #1d1d1d;
 }
 
 input::-ms-clear {
@@ -155,16 +154,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body.popup, body.lock {
-}
-.popup-overlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -185,6 +174,15 @@ main {
 ::selection {
   background-color: #1d1d1d;
   color: white;
+}
+
+.popup-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 /*--------------------------------------------HEADER---------------------------------------------*/
@@ -279,7 +277,7 @@ main {
   width: 400px;
   min-height: 400px;
   height: auto;
-  bottom: 100%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -303,7 +301,8 @@ main {
 }
 .header .popup.show {
   bottom: 50%;
-  transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   opacity: 1;
 }
 .header .popup .close-popup {
@@ -665,9 +664,8 @@ main {
 }
 
 .sidebar {
-  -webkit-transition: -webkit-transform 0.3s linear 0s;
-  transition: transform 0.3s linear 0s;
-  will-change: transform;
+  -webkit-transition: right 0.3s linear 0s;
+  transition: right 0.3s linear 0s;
 }
 .sidebar .menu__link {
   margin-bottom: 20px;
@@ -745,8 +743,7 @@ main {
     max-height: calc(100vh - 200px);
     height: 100%;
     top: 200px;
-    transform: translateX(100%);
-    right: 0;
+    right: -100%;
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 5px rgb(160, 157, 157);
     -webkit-backdrop-filter: blur(6px);
@@ -755,14 +752,15 @@ main {
     border-radius: 15px 0 0 15px;
     text-align: center;
     z-index: 2;
+    overflow-y: auto;
   }
   .sidebar a {
     color: #fff !important;
     opacity: 1 !important;
   }
   .sidebar.show {
-    transform: translateX(0);
-    z-index: 999;
+    right: 0;
+    overflow-y: auto;
   }
 }
 
